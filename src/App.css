@@ -1,38 +1,335 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+
+body {
+  background: white;
+}
+
+
+.Header {
+  background: radial-gradient(circle, #39124a 0%, #39124a 70%, #2d2d2d 100%);
+
+}
+
+
+.title {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.title:hover {
+  transform: scale(1.03);
+}
+
+
+.dev-info {
+  position: relative;
+  overflow: hidden;
+}
+
+.dev-info svg {
+  z-index: 0;
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+}
+
+.header-info {
+  z-index: 5;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.header-info-dev {
+  animation: slideIn 1s forwards;
+  z-index: 5;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+
+.title {
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.title-mobile {
+  z-index: 5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.links {
+  display: none;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.links a {
+  position: relative;
+  top: 0;
+  display: none;
+  text-decoration: none;
+  color:lightgray;
+  font-size: 40px;
+  transition: 0.5s ease;
+}
+
+
+.header-info h1 {
+  font-size: 125px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  line-height: 100px;
+  gap: 20px;
+  margin: 0 !important;
+  color: whitesmoke;
+  padding: 0 !important;
+}
+
+
+.header-info h1 a {
+  position: relative;
+  display: inline-flex;
+  text-decoration: none;
+  color:lightgray;
+  font-size: 40px;
+  transition: 0.5s ease;
+}
+
+
+.header-info p {
+  align-self: flex-end;
+  text-align: right;
+  font-weight: bold;
+  color: whitesmoke;
+  max-width: auto;
+  margin: 0;
+  padding: 0 7px;
+}
+
+
+.header-info span {
+  color: whitesmoke;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 7px;
+}
+
+
+.header-info h1 a:hover {
+  margin-bottom: 7px;
+  color: whitesmoke;
+}
+
+
+.links a:hover {
+  top: -7px;
+  color: whitesmoke;
+}
+
+
+.button-info {
+  display: inline-block;
+  margin-top: 60px;
+  margin-left: 30%;
+  border-radius:2px 20px 2px 20px;
+  background-color: #6a377d;
+  padding: 10px 20px;
+  text-align: center;
+  max-width: 200px;
+  border: 1px solid #c496d0;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.button-info a {
   color: white;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+
+.button-info a:hover {
+  color: #320c56;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.button-info:hover {
+  transform: scale(1.1);
+  background-color: #824996;
+}
+
+
+img {
+  width: 50%;
+  height: auto;
+  margin-left: 50px;
+}
+
+
+.info-food {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 70px;
+ 
+}
+
+
+.info-text {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  
+}
+
+
+.info-title {
+  font-size: 60px;
+  font-weight: 900;
+  color: #200031;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+
+.info-img {
+  width: 3500px;
+  height: auto;
+  margin-left: 40px;
+  margin-top: 30px;
+  transform: translateY(600px);
+  opacity: 0;
+}
+
+
+.info-content {
+  transform: translateY(600px);
+  opacity: 0;
+}
+
+
+.space-top {
+  margin-top: 20px;
+}
+
+
+.space-bottom {
+  margin-bottom: 20px;
+}
+
+
+.space-left {
+  margin-left: 20px;
+}
+
+.space-right {
+  margin-right: 20px;
+}
+
+
+.space-horizontal {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+.space-vertical {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.space-around {
+  margin: 20px;
+}
+
+
+.space-between {
+  margin-right: 20px;
+}
+
+
+.space-inside {
+  padding: 20px;
+}
+
+.button-store {
+  display: inline-block;
+  margin-top: 30px;
+  border-radius: 2px 20px 2px 20px;
+  background-color: #000000;
+  padding: 10px 20px;
+  text-align: center;
+  max-width: 200px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease; 
+}
+
+.button-store:hover {
+  transform: scale(1.1);
+  background-color: #ffffff;
+  color: #000000; 
+  border: 2px solid #39124a;
+}
+
+.button-store a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center; 
+  text-decoration: none;
+}
+
+.button-store a svg {
+  width: 24px; 
+  height: 24px; 
+  fill: #ffffff; 
+  transition: fill 0.3s ease; 
+  margin-right: 8px;
+}
+
+.button-store:hover a {
+  color: #000000; 
+}
+
+.button-store:hover a svg {
+  fill: #000000; 
 }
